@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cm.ssm.dao.UserDao">
+    <select id="queryUserById" parameterType="int" resultType="com.cm.ssm.po.User">
+        select
+            user_id as userId,user_name userName,user_pwd userPwd,user_email userEmail
+        from
+            tb_user
+        where user_id = #{id}
+    </select>
+</mapper>
